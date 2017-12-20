@@ -28,6 +28,9 @@
         <button class="btn btn-default">
             <a href="{{url('/dashboard/home')}}">Manage Home</a>
         </button><hr/>
+        <button class="btn btn-sucess">
+        <a href="/portfoliouploadform">Manage Portfolio</a>
+    </button><br/>
         <button class="btn btn-default"><a href="{{url('/dashboard/about')}}">Manage About Us</a></button><hr/>
         <button class="btn btn-default"><a href="{{url('/dashboard/contact')}}">Manage Contact Us</a></button><hr/>
 </div>
