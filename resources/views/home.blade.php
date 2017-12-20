@@ -1,7 +1,7 @@
 @extends('layouts.backview.master')
 
 @section('content')
-<div class="container content-container">
+<div class="container content-container" xmlns="http://www.w3.org/1999/html">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -20,11 +20,15 @@
         </div>
     </div>
 
-    <button class="btn btn-sucess">
+    <button class="btn btn-default">
         <a href="/addcontent">Add Content</a>
     </button>
-    <button class="btn btn-sucess">
-        <a href="/portfoliouploadform">Manage Portfolio</a>
-    </button>
+
+    <hr/>
+        <button class="btn btn-default">
+            <a href="{{url('/dashboard/home')}}">Manage Home</a>
+        </button><hr/>
+        <button class="btn btn-default"><a href="{{url('/dashboard/about')}}">Manage About Us</a></button><hr/>
+        <button class="btn btn-default"><a href="{{url('/dashboard/contact')}}">Manage Contact Us</a></button><hr/>
 </div>
 @endsection
