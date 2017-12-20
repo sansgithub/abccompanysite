@@ -10,6 +10,7 @@
         <input required type="file" class="form-control" name="files[]" placeholder="address" multiple>
     </div>      
       <input type="submit" class="btn btn-primary">
+      <input type="reset" class="btn btn-danger">
       <input type="hidden" name="_token" value="{{ Session::token() }}">
     </form>
     </div>
