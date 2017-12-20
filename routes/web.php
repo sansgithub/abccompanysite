@@ -30,3 +30,5 @@ Route::post('/postcontent', 'HomeController@postContent')->name('post-content');
 Route::post('/postmessage', 'ContactController@postMessage')->name('postmessage');
 
 Route::get('/portfoliouploadform', 'PortfolioController@portfolioUploadForm')->name('portfoliouploadform');
+
+Route::post('upload', 'PortfolioController@postManagePortfolio')->name('upload');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Storage;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
@@ -16,8 +17,16 @@ class PortfolioController extends Controller
     	return view('portfoliouploadform');
     }
 
-    public function postManagePortfolio()
+    public function postManagePortfolio(Request $request)
     {
+        $images = $request->file('files');
 
+        if(!empty($images)){
+            foreach($images as $image){
+                Storage::put($image->getClientOriginalName(), file_get_contents($image));
+            }
+        }
+        return redirect()->back();
+        	
     }
 }
