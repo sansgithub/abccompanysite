@@ -10,4 +10,14 @@ class PortfolioController extends Controller
     {
     	return view('portfolio');
     }
+
+    public function portfolioUploadForm()
+    {
+    	return view('portfoliouploadform');
+    }
+
+    public function postManagePortfolio()
+    {
+
+    }
 }
