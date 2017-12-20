@@ -23,5 +23,8 @@
     <button class="btn btn-sucess">
         <a href="/addcontent">Add Content</a>
     </button>
+    <button class="btn btn-sucess">
+        <a href="/addcontent">Manage Portfolio</a>
+    </button>
 </div>
 @endsection
