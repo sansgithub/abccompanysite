@@ -28,3 +28,9 @@ Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route::post('/postcontent', 'HomeController@postContent')->name('post-content');
 
 Route::post('/postmessage', 'ContactController@postMessage')->name('postmessage');
+
+Route::get('/dashboard/home', 'BackEndController@home');
+
+Route::post('/dashboard/{title}', 'BackEndController@updateHome');
+
+Route::get('/dashboard/mission', 'BackEndController@mission');

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use App\Page;
 
 class UsersTableSeeder extends Seeder
 {
@@ -13,9 +14,30 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $user = new User();
-        $user->name = 'Sanjeev';
-        $user->email = 'sanjeevkdk32@gmail.com';
-        $user->password = bcrypt('sanjeev_kdk32@admin');
+        $user->name = 'Admin';
+        $user->email = 'admin@gmail.com';
+        $user->password = bcrypt('123123');
         $user->save();
+
+        $page_title = new Page();
+        $page_title->title = 'home';
+        $page_title->heading = '';
+        $page_title->description = '';
+        $page_title->image_url = '';
+        $page_title->save();
+
+        $page_title = new Page();
+        $page_title->title = 'mission';
+        $page_title->heading = '';
+        $page_title->description = '';
+        $page_title->image_url = '';
+        $page_title->save();
+
+        $page_title = new Page();
+        $page_title->title = 'vision';
+        $page_title->heading = '';
+        $page_title->description = '';
+        $page_title->image_url = '';
+        $page_title->save();
     }
 }
