@@ -39,3 +39,7 @@ Route::post('/dashboard/{title}', 'BackEndController@updateHome');
 
 Route::get('/dashboard/mission', 'BackEndController@mission');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Page;
 
 class HomeController extends Controller
 {
@@ -14,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -26,33 +25,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
-    public function getAddContent()
-    {
-        return view('addcontent');
-    }
-
-    public function postContent(Request $request)
-    {
-        
-        $this->validate($request, [
-            'title' => 'required|min:5',
-            'description' => 'required|max:60' 
-        ]);
-
-        $title = $request->title;
-        echo count($title);
-        $description = $request->description;
-        
-        $page = new Page;
-        $page->title = $title;
-        $page->description = $description;
-        //dd($page);
-        
-        $page->save();
-        return redirect()->route('home');
-
-    }
 }
-
-
